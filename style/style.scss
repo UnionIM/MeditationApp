@@ -1,0 +1,65 @@
+@import "null";
+@import "UI";
+@import "colorVariables";
+
+video{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+body{
+  overflow: hidden;
+}
+
+.main{
+  margin: 200px auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  justify-content: center;
+  align-items: center;
+  .timer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 250px;
+    & svg{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    &__display{
+      position: absolute;
+      color: white;
+      font-size: 50px;
+    }
+  }
+  .time-buttons{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  .background-buttons{
+    width: 50%;
+    display: flex;
+    gap: 50px;
+    justify-content: space-around;
+  }
+}
+
+@media (max-height: 900px) {
+  .timer{
+    margin-bottom: 350px;
+    & svg{
+      width: 300px;
+    }
+  }
+}
